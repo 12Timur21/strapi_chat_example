@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "singularName": "message",
+    "pluralName": "messages",
+    "displayName": "Message",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "message_text": {
+      "type": "text"
+    },
+    "message_media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "message_type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "media"
+      ]
+    },
+    "chat_id": {
+      "type": "uid"
+    },
+    "creation_date": {
+      "type": "datetime"
+    },
+    "chat": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chat.chat"
+    }
+  }
+}

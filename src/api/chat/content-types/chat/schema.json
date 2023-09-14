@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "chat_id": {
-      "type": "uid"
-    },
     "messages": {
       "type": "relation",
       "relation": "oneToMany",
